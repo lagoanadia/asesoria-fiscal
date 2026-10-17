@@ -1,0 +1,13 @@
+/* Estilos base. Los tokens de marca (colores, tipografías, espacios) los define el agente director-arte
+   a partir de la especificación: no se inventan antes. */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
