@@ -32,7 +32,8 @@ Respuestas del asesor (recogidas el 17/10/2026). Son la base de la especificaci�
 
 ## Imagen
 
-- **Logo, colores, fotos profesionales**: no tiene.
+- **Estilo**: **diseño premium** (decisión del 17/10/2026; ver «Estética» en `CLAUDE.md`).
+- **Logo, colores, fotos profesionales**: no tiene. Una sesión de fotos profesional de Iago ayudaría mucho al resultado.
 - **Webs de referencia**: *pendiente*. Hay que mirar webs de otras asesorías (cuáles gustan y por qué).
 
 ## Casos reales (posibles testimonios)

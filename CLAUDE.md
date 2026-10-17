@@ -44,7 +44,19 @@ docs/agentes/         Informes y propuestas de los demás agentes
   Los formularios piden solo lo necesario para contactar (nombre, forma de contacto, motivo) y registran
   el consentimiento de privacidad con fecha. Nada personal en logs.
 - **Tono**: profesional, cercano y claro. Explicar sin jerga; tratar de tú o de usted según `docs/briefing.md`.
-- **Estética**: confianza y seriedad. Sobria, ordenada y legible; movimiento mínimo y funcional.
+- **Estética: premium.** Tiene que parecer un despacho boutique de alto nivel, no una plantilla. En concreto:
+  - **Espacio**: márgenes y separaciones generosos, retícula precisa y pocas cosas por pantalla.
+  - **Tipografía protagonista**: una serif de calidad para titulares con una sans neutra para el texto,
+    escala amplia y detalles cuidados (comillas tipográficas, cifras alineadas, interlineado ajustado).
+  - **Paleta reducida**: un color profundo propio, neutros cálidos y un acento usado con mucha mesura.
+  - **Imagen**: fotografía real de Iago y de calidad. Si todavía no la hay, composición tipográfica,
+    nunca fotos de banco de imágenes.
+  - **Movimiento sutil y preciso**: transiciones suaves entre páginas y microinteracciones cuidadas, nada llamativo
+    (skill `movimiento-web`).
+  - **Rendimiento y accesibilidad** forman parte de lo premium: carga instantánea y lectura cómoda.
+  - **Evitar los clichés de «lujo» y de asesoría**: dorado sobre negro, apretones de manos, calculadoras, iconos
+    genéricos, gradientes llamativos y el azul corporativo de banco.
+  - **Premium no es distante**: sigue siendo cercano y claro.
   La dirección visual la propone el agente `director-arte` y la aprueba la usuaria.
 
 ## Convenciones de código
@@ -52,7 +64,7 @@ docs/agentes/         Informes y propuestas de los demás agentes
 - **Todo en español**: nombres de variables, funciones, clases CSS, commits y documentación.
 - **Accesibilidad (WCAG 2.2 AA)**: `<label for>` en formularios, `role="alert"` en errores, contraste suficiente,
   foco visible y objetivos táctiles de 48 px.
-- **Formularios**: skill `astro-cloudflare:formulario-publico`. **Emails**: skill `astro-cloudflare:emails-transaccionales`.
+- **Formularios**: skill `formulario-publico`. **Emails**: skill `emails-transaccionales`.
 - **Secretos**: nunca en el código ni en `wrangler.jsonc`; como Secrets de Cloudflare.
 - **Comentarios**: breves, en español, explican el *porqué*.
 - **Commits**: en español, en presente, y explican el porqué.
@@ -70,9 +82,12 @@ npm run check        # tipos y errores de Astro: pásalo antes de cada commit
 
 ## Trabajo con agentes
 
-Los agentes y skills vienen del catálogo **kit-agents** (repo `lagoanadia/kit-agents`), declarado en
-`.claude/settings.json`: plugin `equipo-base` (agentes) y plugin `astro-cloudflare` (skills del stack).
-Se mejoran en el kit, no aquí. Las skills que solo sirvan para este proyecto van en `.claude/skills/`.
+Los agentes (`.claude/agents/`) y skills (`.claude/skills/`) son **copias del kit** `lagoanadia/kit-agents`
+(plugins `equipo-base` y `astro-cloudflare`; versiones en `.claude/kit.json`). Están dentro del repo para que
+cualquier sesión, también en la nube, los tenga desde el primer momento sin instalar nada.
+- **No se editan aquí.** Se mejoran en el kit y se traen con `node scripts/actualizar-kit.mjs`
+  (necesita acceso al repo kit-agents: en la nube, añadirlo a la sesión).
+- Las skills que solo sirvan para este proyecto van en `.claude/skills/` con un nombre que no exista en el kit.
 
 Reglas:
 1. Cada bloque de trabajo va en **su propia rama** y termina en un PR.
