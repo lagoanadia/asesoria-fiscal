@@ -5,9 +5,10 @@ Respuestas del asesor (recogidas el 17/10/2026). Son la base de la especificaci�
 
 ## El negocio
 
-- **Nombre comercial**: *pendiente*. No tiene logo.
-- **Nombre del asesor y formación**: *pendiente*.
-- **Ciudad / zona**: trabaja con mucha gente de su **pueblo** (*pendiente: cuál*). ¿Presencial, online o ambas?: *pendiente*.
+- **Nombre del asesor**: Iago. Formación: *pendiente*.
+- **Nombre comercial**: *pendiente* (¿su propio nombre?). No tiene logo.
+- **Zona**: no se limita a un sitio. **La web no incluye ninguna localización** (ni pueblo, ni ciudad, ni dirección).
+  ¿Presencial, online o ambas?: *pendiente*.
 - **Experiencia**: tiene experiencia y casos reales que contar (ver «Casos reales»).
 - **¿Tú o usted?** con los clientes: *pendiente*.
 
@@ -18,12 +19,13 @@ Respuestas del asesor (recogidas el 17/10/2026). Son la base de la especificaci�
 - **Bancarios**: hipotecas, préstamos personales, créditos, depósitos y planes de pensiones.
 - **¿Está inscrito en algún registro?**: **no**. → Ver «Notas para la especificación», punto 1.
 - **A quién se dirige**: particulares y autónomos.
-- **Precios**: *pendiente* (¿se publican, «desde», o «pide presupuesto»?).
+- **Precios**: **no se publican**. Se hablan por llamada o en persona: la llamada a la acción es «contactar».
 
 ## Contacto
 
 - **Cómo quiere que le contacten**: le da igual. → Ver «Notas para la especificación», punto 3.
-- **Teléfono, email y dirección** que se pueden publicar: *pendiente*.
+- **Teléfono** (se publica): 635 52 06 05. ¿Tiene WhatsApp en ese número?: *pendiente*.
+- **Email**: *pendiente*. **Dirección**: no se publica.
 - **Horario**: *pendiente*.
 - **Redes sociales**: *pendiente*.
 - **Dominio**: no tiene.
@@ -41,7 +43,7 @@ Contados por el asesor. **No se publican tal cual**: ver «Notas para la especif
    se ahorró esos 4.000 €.
 2. **Ayudas y becas**: a una mujer una gestora no le envió el borrador; él le gestionó las ayudas y becas,
    y este año ha decidido hacerlo con él.
-3. **Declaraciones de la renta**: se las hace a mucha gente del pueblo.
+3. **Declaraciones de la renta**: se las hace a mucha gente de su zona (sin nombrar el lugar en la web).
 
 ## Contenido extra (ideas)
 
@@ -75,7 +77,7 @@ Avisos detectados al recoger el briefing. No son consejo legal: son puntos que e
      Se cuenta en positivo lo que hizo él: «revisé la liquidación del impuesto de sucesiones y se aplicaron
      las reducciones que correspondían».
    - Cifras (los 4.000 €) solo si son exactas y el cliente da permiso.
-3. **Contacto.** Como le da igual, la propuesta por defecto es lo más sencillo de atender: un botón de WhatsApp,
-   el teléfono y un formulario corto. La reserva de citas en calendario, solo si más adelante hace falta.
-4. **Público local.** Mucha clientela es de su pueblo: la cercanía («tu asesor en <pueblo>») es un argumento fuerte
-   y conviene cuidar el SEO local (ficha de Google Business Profile).
+3. **Contacto.** Como le da igual y los precios se hablan en persona, la propuesta por defecto es lo más sencillo
+   de atender: el teléfono bien visible (y WhatsApp si lo tiene en ese número) y un formulario corto. La reserva de citas en calendario, solo si más adelante hace falta.
+4. **Sin localización.** Iago no quiere limitarse a un sitio: la web no nombra pueblo ni ciudad.
+   La cercanía se transmite con el trato (su nombre, su foto, hablar por teléfono o en persona), no con un lugar.
