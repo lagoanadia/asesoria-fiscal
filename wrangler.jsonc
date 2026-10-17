@@ -1,0 +1,11 @@
+// Configuración de Cloudflare del Worker "asesoria-fiscal".
+// El adaptador de Astro añade lo demás (punto de entrada, assets). Aquí irán la base de datos, los secretos, etc.
+// cuando la especificación los pida.
+{
+  "name": "asesoria-fiscal",
+  "compatibility_date": "2026-09-01",
+  "vars": {
+    // Dirección pública de la web (enlaces en emails y SEO). Vacía hasta tener dominio.
+    "SITIO_URL": ""
+  }
+}
