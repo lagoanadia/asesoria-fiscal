@@ -44,7 +44,19 @@ docs/agentes/         Informes y propuestas de los demás agentes
   Los formularios piden solo lo necesario para contactar (nombre, forma de contacto, motivo) y registran
   el consentimiento de privacidad con fecha. Nada personal en logs.
 - **Tono**: profesional, cercano y claro. Explicar sin jerga; tratar de tú o de usted según `docs/briefing.md`.
-- **Estética**: confianza y seriedad. Sobria, ordenada y legible; movimiento mínimo y funcional.
+- **Estética: premium.** Tiene que parecer un despacho boutique de alto nivel, no una plantilla. En concreto:
+  - **Espacio**: márgenes y separaciones generosos, retícula precisa y pocas cosas por pantalla.
+  - **Tipografía protagonista**: una serif de calidad para titulares con una sans neutra para el texto,
+    escala amplia y detalles cuidados (comillas tipográficas, cifras alineadas, interlineado ajustado).
+  - **Paleta reducida**: un color profundo propio, neutros cálidos y un acento usado con mucha mesura.
+  - **Imagen**: fotografía real de Iago y de calidad. Si todavía no la hay, composición tipográfica,
+    nunca fotos de banco de imágenes.
+  - **Movimiento sutil y preciso**: transiciones suaves entre páginas y microinteracciones cuidadas, nada llamativo
+    (skill `movimiento-web`).
+  - **Rendimiento y accesibilidad** forman parte de lo premium: carga instantánea y lectura cómoda.
+  - **Evitar los clichés de «lujo» y de asesoría**: dorado sobre negro, apretones de manos, calculadoras, iconos
+    genéricos, gradientes llamativos y el azul corporativo de banco.
+  - **Premium no es distante**: sigue siendo cercano y claro.
   La dirección visual la propone el agente `director-arte` y la aprueba la usuaria.
 
 ## Convenciones de código
