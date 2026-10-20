@@ -1,31 +1,40 @@
 # Briefing de la asesoría
 
-Respuestas del asesor (recogidas el 17/10/2026). Son la base de la especificación: lo que quede vacío o marcado como
+Respuestas del asesor (recogidas el 17/10/2026 y ampliadas el 20/10/2026 con sus respuestas a las preguntas de la
+especificación; ver «Respuestas del 20/10/2026» al final). Son la base de la especificación: lo que quede vacío o marcado como
 *pendiente*, el agente `producto` lo pondrá en «preguntas abiertas» en vez de inventarlo.
 
 ## El negocio
 
-- **Nombre del asesor**: Iago. Formación: *pendiente*.
+- **Nombre del asesor**: Iago. Formación: *pendiente*. **No está colegiado.** **Trabaja solo.**
 - **Nombre comercial**: *pendiente* (¿su propio nombre?). No tiene logo.
 - **Zona**: no se limita a un sitio. **La web no incluye ninguna localización** (ni pueblo, ni ciudad, ni dirección).
-  ¿Presencial, online o ambas?: *pendiente*.
+  **Atiende online** (a distancia).
 - **Experiencia**: tiene experiencia y casos reales que contar (ver «Casos reales»).
-- **¿Tú o usted?** con los clientes: *pendiente*.
+- **¿Tú o usted?** con los clientes: no lo ha dicho. Pide algo «más chill» (ver «Respuestas del 20/10/2026»), así
+  que la propuesta es **de tú**, pendiente de que lo confirme.
 
 ## Servicios
 
-- **Fiscales**: declaraciones de la renta; trimestrales de IVA; impuesto de sucesiones y donaciones;
-  gestión de ayudas y becas (según los casos reales).
-- **Bancarios**: hipotecas, préstamos personales, créditos, depósitos y planes de pensiones.
+- **Fiscales**:
+  - **Renta**: de particulares y de autónomos.
+  - **IVA y demás obligaciones de los autónomos**: «IVA sí, hago obligaciones de autónomos» (cuáles en concreto:
+    *pendiente*).
+  - **Sucesiones y donaciones**: de **cualquier comunidad autónoma**.
+  - **Ayudas**: gestiona **becas educativas**.
+- **Bancarios**: hipotecas, préstamos personales, créditos, depósitos y planes de pensiones. En sus palabras:
+  «asesoro para encontrar la mejor opción bancaria, pero en ningún caso cobro comisiones».
+  → Ver «Notas para la especificación», punto 1 (esto cambia el aviso).
 - **¿Está inscrito en algún registro?**: **no**. → Ver «Notas para la especificación», punto 1.
 - **A quién se dirige**: particulares y autónomos.
 - **Precios**: **no se publican**. Se hablan por llamada o en persona: la llamada a la acción es «contactar».
 
 ## Contacto
 
-- **Cómo quiere que le contacten**: le da igual. → Ver «Notas para la especificación», punto 3.
-- **Teléfono** (se publica): 635 52 06 05. ¿Tiene WhatsApp en ese número?: *pendiente*.
-- **Email**: *pendiente*. **Dirección**: no se publica.
+- **Cómo quiere que le contacten**: por **WhatsApp** y por **email mediante un formulario**.
+- **Teléfono** (se publica): 635 52 06 05. WhatsApp en ese número: se da por hecho que sí (lo pide como canal),
+  *confirmar el número*.
+- **Email de destino del formulario**: *pendiente* (sin él, el formulario no se publica). **Dirección**: no se publica.
 - **Horario**: *pendiente*.
 - **Redes sociales**: *pendiente*.
 - **Dominio**: no tiene.
@@ -64,7 +73,14 @@ Contados por el asesor. **No se publican tal cual**: ver «Notas para la especif
 Avisos detectados al recoger el briefing. No son consejo legal: son puntos que el asesor debe confirmar
 (por ejemplo, con un abogado o una gestoría de confianza) antes de publicar.
 
-1. **Servicios bancarios sin inscripción.** Varias de estas actividades pueden estar reguladas cuando se hacen
+1. **Servicios bancarios sin inscripción.** *(Actualizado el 20/10/2026.)* Iago dice que **asesora para encontrar
+   la mejor opción bancaria** y que **no cobra comisiones**. No cobrar comisiones es bueno y se puede decir, pero
+   **no resuelve lo del registro**: recomendar qué hipoteca o qué préstamo conviene es justo lo que puede exigir
+   inscripción (por ejemplo, el asesoramiento en crédito inmobiliario). Antes de publicar, que lo confirme un
+   abogado. Mientras tanto, la web habla de **ayudarte a entender y comparar las ofertas que ya tienes**, no de
+   «encontrar la mejor».
+
+   Texto original de este punto: Varias de estas actividades pueden estar reguladas cuando se hacen
    como profesional: la intermediación de hipotecas y de préstamos o créditos (registro en el Banco de España o en
    la comunidad autónoma), la distribución de planes de pensiones (Dirección General de Seguros) y la recomendación
    de productos de inversión (CNMV). Hasta que lo confirme:
@@ -82,3 +98,18 @@ Avisos detectados al recoger el briefing. No son consejo legal: son puntos que e
    de atender: el teléfono bien visible (y WhatsApp si lo tiene en ese número) y un formulario corto. La reserva de citas en calendario, solo si más adelante hace falta.
 4. **Sin localización.** Iago no quiere limitarse a un sitio: la web no nombra pueblo ni ciudad.
    La cercanía se transmite con el trato (su nombre, su foto, hablar por teléfono o en persona), no con un lugar.
+
+---
+
+## Respuestas del 20/10/2026
+
+Respuesta de Iago a las preguntas de la especificación (por mensaje, copiada tal cual):
+
+> No estoy colegiado, atiendo online, trabajo solo. Renta tanto particulares como autónomos, IVA si hago
+> obligaciones de autónomos, cualquier comunidad autónoma en sucesiones, gestiono becas educativas en el apartado
+> de ayudas, parte bancaria asesoro para encontrar la mejor opción bancaria pero en ningún caso cobro comisiones,
+> contactar a través de WhatsApp y Mail con formulario
+
+Y después, en gallego: «eu penso que se pode reducir un pouco e facelo máis chill» → **que se puede reducir un
+poco y hacerlo bastante más relajado**. Se interpreta así: menos texto y menos páginas, tono más cercano (de tú) y
+menos preguntas. Pendiente de que la usuaria confirme que se refería a la web y no solo a la lista de preguntas.
