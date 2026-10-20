@@ -15,7 +15,8 @@ const { titulo, descripcion = '' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{titulo}</title>
     {descripcion && <meta name="description" content={descripcion} />}
-    <meta name="theme-color" content="#F7F3EC" />
+    <meta name="theme-color" content="#ECE6DA" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- En construcción: fuera de los buscadores hasta que se publique con dominio. -->
     <meta name="robots" content="noindex, nofollow" />
