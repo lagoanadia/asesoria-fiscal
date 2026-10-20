@@ -1,6 +1,364 @@
 ---
 import Base from '../layouts/Base.astro';
+
+// Un solo número, escrito siempre igual (spec, G1).
+const telefono = '635 52 06 05';
+const telefonoEnlace = 'tel:+34635520605';
+const whatsapp = 'https://wa.me/34635520605?text=' + encodeURIComponent('Hola, Iago. Te escribo por ');
+
+const servicios = [
+  {
+    numero: '01',
+    titulo: 'La renta',
+    texto: 'Te la preparo, la reviso y te explico el resultado. Seas particular o autónomo.',
+    nota: 'Particulares y autónomos.',
+  },
+  {
+    numero: '02',
+    titulo: 'Si eres autónomo',
+    texto: 'El IVA y el resto de papeleo de autónomo, conmigo. Tú a lo tuyo.',
+    nota: 'IVA y demás obligaciones.',
+  },
+  {
+    numero: '03',
+    titulo: 'Herencias y donaciones',
+    texto: 'Con calma. Reviso la documentación, compruebo que se aplica lo que te corresponde y te explico cada paso.',
+    nota: 'En cualquier comunidad autónoma.',
+  },
+  {
+    numero: '04',
+    titulo: 'Becas educativas',
+    texto: 'Te ayudo a preparar y presentar la solicitud, para que no se quede nada por el camino.',
+    nota: 'Preparo y presento la solicitud.',
+  },
+];
 ---
-<Base titulo="En construcción">
-  <h1>Web en construcción</h1>
+<Base
+  titulo="Iago · Asesoría fiscal"
+  descripcion="Renta, autónomos, herencias y becas. Y tu banco, explicado en claro. Todo online, hablando siempre con Iago."
+>
+  <header class="cabecera" slot="cabecera">
+    <a class="logo" href="/" aria-label="Iago, inicio">Iago<span aria-hidden="true">.</span></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#banco">Tu banco</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="boton boton--pequeno" href={whatsapp}>WhatsApp</a>
+  </header>
+
+  <!-- PENDIENTE REVISIÓN ASESOR: todos los textos de esta página son un primer borrador. -->
+
+  <section class="portada envoltura" aria-labelledby="titulo-portada">
+    <div class="columna">
+      <p class="etiqueta">Asesoría fiscal · online</p>
+      <h1 id="titulo-portada">Tus papeles, <span class="subrayado">explicados</span> con calma.</h1>
+      <p class="entradilla">
+        Soy Iago. Te hago la renta, llevo tus cosas de autónomo, te ayudo con herencias y becas,
+        y te explico lo que te ofrece el banco. Sin jerga y sin prisas.
+      </p>
+      <div class="acciones">
+        <a class="boton" href={whatsapp}>Escríbeme por WhatsApp</a>
+        <a class="enlace-telefono" href={telefonoEnlace}>{telefono}</a>
+      </div>
+    </div>
+    <aside class="margen" aria-label="Nota">
+      <p class="nota">Trabajo solo: hablas siempre conmigo, de principio a fin.</p>
+    </aside>
+  </section>
+
+  <section id="servicios" class="seccion envoltura" aria-labelledby="titulo-servicios">
+    <div class="columna">
+      <p class="etiqueta">Lo fiscal</p>
+      <h2 id="titulo-servicios">En qué te echo una mano</h2>
+    </div>
+    <ol class="servicios">
+      {servicios.map((s) => (
+        <li class="servicio">
+          <span class="servicio__numero" aria-hidden="true">{s.numero}</span>
+          <div class="columna">
+            <h3>{s.titulo}</h3>
+            <p>{s.texto}</p>
+          </div>
+          <p class="margen nota">{s.nota}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section id="banco" class="seccion seccion--pino" aria-labelledby="titulo-banco">
+    <div class="envoltura">
+      <div class="columna">
+        <p class="etiqueta">Lo bancario</p>
+        <h2 id="titulo-banco">Tu banco, en claro.</h2>
+        <!-- PENDIENTE REVISIÓN ASESOR · PENDIENTE VALIDACIÓN LEGAL: no publicar sin que lo revise un abogado
+             (ver docs/briefing.md, «Notas para la especificación», punto 1). -->
+        <p class="entradilla">
+          ¿Tienes encima de la mesa una oferta de hipoteca, préstamo, depósito o plan de pensiones?
+          La miramos juntos, te explico las condiciones y comparamos lo que te han ofrecido.
+        </p>
+        <p>No cobro nada a ningún banco. Trabajo solo para ti.</p>
+      </div>
+      <aside class="margen" aria-label="Aviso">
+        <p class="nota nota--clara">
+          No soy intermediario de crédito ni asesor financiero: no consigo financiación ni negocio con el banco
+          por ti. La decisión es siempre tuya.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="seccion envoltura" aria-labelledby="titulo-como">
+    <div class="columna">
+      <p class="etiqueta">Cómo funciona</p>
+      <h2 id="titulo-como">Sencillo y desde casa</h2>
+    </div>
+    <ol class="pasos">
+      <li><span aria-hidden="true">1</span><p>Me escribes por WhatsApp o me llamas.</p></li>
+      <li><span aria-hidden="true">2</span><p>Me cuentas tu caso y vemos qué necesitas.</p></li>
+      <li><span aria-hidden="true">3</span><p>Me encargo y te lo explico todo.</p></li>
+    </ol>
+  </section>
+
+  <section id="contacto" class="seccion envoltura contacto" aria-labelledby="titulo-contacto">
+    <div class="columna">
+      <h2 id="titulo-contacto">¿Hablamos?</h2>
+      <p class="entradilla">Cuéntame qué necesitas y lo vemos.</p>
+      <div class="acciones">
+        <a class="boton" href={whatsapp}>Escríbeme por WhatsApp</a>
+        <a class="enlace-telefono" href={telefonoEnlace}>{telefono}</a>
+      </div>
+      <!-- El formulario por email se añade cuando Iago confirme a qué dirección llegan los mensajes (spec, G3). -->
+    </div>
+  </section>
+
+  <footer class="pie envoltura" slot="pie">
+    <p><span class="logo logo--pie">Iago<span aria-hidden="true">.</span></span> Asesoría fiscal online</p>
+    <p class="pie__legal">Web en construcción. Aviso legal y privacidad, en preparación.</p>
+  </footer>
+
+  <a class="barra-movil" href={whatsapp}>Escríbeme por WhatsApp</a>
 </Base>
+
+<style>
+  .envoltura {
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: var(--margen-lateral);
+  }
+
+  /* Retícula de libro: número · columna de texto · margen. En móvil, todo en una columna. */
+  .portada,
+  .seccion--pino .envoltura,
+  .servicio {
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media (min-width: 60rem) {
+    .portada,
+    .seccion--pino .envoltura {
+      grid-template-columns: minmax(0, var(--medida-texto)) 16rem;
+      column-gap: clamp(3rem, 6vw, 6rem);
+      align-items: end;
+    }
+    .servicio {
+      grid-template-columns: 4rem minmax(0, 1fr) 16rem;
+      column-gap: clamp(2rem, 4vw, 4rem);
+      align-items: baseline;
+    }
+  }
+
+  .columna { max-width: var(--medida-texto); }
+
+  /* Cabecera */
+  .cabecera {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding: 1.5rem var(--margen-lateral);
+  }
+  .cabecera nav { margin-left: auto; }
+  .cabecera ul { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+  .cabecera nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    text-decoration: none;
+    font-size: var(--texto-pequeno);
+    color: var(--color-tinta-suave);
+    transition: color 0.2s var(--curva);
+  }
+  .cabecera nav a:hover { color: var(--color-tinta); }
+  @media (max-width: 47.99rem) {
+    .cabecera nav { display: none; }
+    .cabecera .boton { margin-left: auto; }
+  }
+
+  .logo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: var(--color-pino);
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--color-lacre); }
+  .logo--pie { font-size: 1.25rem; margin-right: 0.5rem; }
+
+  /* Textos */
+  .etiqueta {
+    font-size: var(--texto-pequeno);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-lacre);
+    margin-bottom: 1.25rem;
+  }
+  h1 { font-size: var(--titulo-1); color: var(--color-pino); }
+  h2 { font-size: var(--titulo-2); color: var(--color-pino); margin-bottom: 1.5rem; }
+  h3 { font-size: var(--titulo-3); font-weight: 500; margin-bottom: 0.5rem; }
+  .entradilla {
+    font-size: var(--texto-entradilla);
+    line-height: 1.45;
+    color: var(--color-tinta-suave);
+    margin-top: 1.75rem;
+  }
+
+  /* El subrayado a mano: el único gesto del acento en la portada. */
+  .subrayado {
+    background: linear-gradient(var(--color-lacre), var(--color-lacre)) no-repeat 0 92% / 0% 2px;
+    animation: subrayar 0.9s 0.4s var(--curva) forwards;
+  }
+  @keyframes subrayar { to { background-size: 100% 2px; } }
+
+  /* Notas al margen */
+  .nota {
+    font-family: var(--fuente-titulos);
+    font-style: italic;
+    font-size: var(--texto-pequeno);
+    line-height: 1.5;
+    color: var(--color-lacre);
+    border-left: 1px solid var(--color-lacre);
+    padding-left: 1rem;
+  }
+  .nota--clara { color: var(--color-lacre-claro); border-color: var(--color-lacre-claro); }
+
+  /* Portada */
+  .portada {
+    padding-block: clamp(4rem, 12vw, 9rem) var(--separacion-seccion);
+    animation: aparecer 0.7s var(--curva) both;
+  }
+  @keyframes aparecer { from { opacity: 0; transform: translateY(8px); } }
+
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 1.75rem;
+    background: var(--color-pino);
+    color: var(--color-papel);
+    font-weight: 600;
+    font-size: var(--texto-pequeno);
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.2s var(--curva), transform 0.2s var(--curva);
+  }
+  .boton:hover { background: #142a23; }
+  .boton:active { transform: translateY(1px); }
+  .boton--pequeno { min-height: 48px; padding: 0 1.25rem; }
+
+  .enlace-telefono {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-weight: 500;
+    text-decoration-color: var(--color-linea);
+    text-underline-offset: 0.3em;
+    transition: text-decoration-color 0.2s var(--curva);
+  }
+  .enlace-telefono:hover { text-decoration-color: var(--color-lacre); }
+
+  /* Secciones */
+  .seccion { padding-block: var(--separacion-seccion); border-top: 1px solid var(--color-linea); }
+
+  .servicios { list-style: none; margin: 3rem 0 0; padding: 0; }
+  .servicio { padding-block: 2.5rem; border-top: 1px solid var(--color-linea); }
+  .servicio__numero {
+    font-family: var(--fuente-titulos);
+    font-size: var(--titulo-3);
+    color: var(--color-lacre);
+    font-variant-numeric: oldstyle-nums;
+  }
+
+  .seccion--pino {
+    background: var(--color-pino);
+    color: var(--color-papel);
+    border-top: 0;
+  }
+  .seccion--pino h2 { color: var(--color-papel); }
+  .seccion--pino .etiqueta { color: var(--color-lacre-claro); }
+  .seccion--pino .entradilla { color: var(--color-pino-claro); }
+  .seccion--pino p:not(.entradilla, .etiqueta, .nota) { margin-top: 1.5rem; }
+
+  .pasos {
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0 0;
+    display: grid;
+    gap: 2rem;
+  }
+  @media (min-width: 48rem) { .pasos { grid-template-columns: repeat(3, 1fr); gap: 3rem; } }
+  .pasos li { border-top: 1px solid var(--color-tinta); padding-top: 1.25rem; }
+  .pasos span {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: var(--titulo-2);
+    color: var(--color-pino);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .contacto h2 { font-size: var(--titulo-1); }
+
+  .pie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 3rem 6rem;
+    border-top: 1px solid var(--color-linea);
+    font-size: var(--texto-pequeno);
+    color: var(--color-tinta-suave);
+  }
+  @media (min-width: 48rem) { .pie { padding-bottom: 3rem; } }
+
+  /* En móvil, WhatsApp siempre a mano sin volver arriba (spec, G1). */
+  .barra-movil {
+    position: fixed;
+    inset: auto 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    background: var(--color-pino);
+    color: var(--color-papel);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2px;
+    box-shadow: 0 6px 24px rgb(28 36 32 / 0.18);
+  }
+  @media (min-width: 48rem) { .barra-movil { display: none; } }
+</style>
