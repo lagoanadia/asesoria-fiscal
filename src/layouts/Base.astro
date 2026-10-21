@@ -1,15 +1,17 @@
 ---
 import '../styles/global.css';
+import { textos, rutas, type Idioma } from '../i18n/textos';
 
 interface Props {
   titulo: string;
   descripcion?: string;
+  idioma?: Idioma;
 }
 
-const { titulo, descripcion = '' } = Astro.props;
+const { titulo, descripcion = '', idioma = 'es' } = Astro.props;
 ---
 <!doctype html>
-<html lang="es">
+<html lang={idioma}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,11 +20,14 @@ const { titulo, descripcion = '' } = Astro.props;
     <meta name="theme-color" content="#ECE6DA" />
     <script is:inline>document.documentElement.classList.add('js');</script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {/* La misma página en el otro idioma, para buscadores y lectores. */}
+    <link rel="alternate" hreflang="es" href={rutas.es} />
+    <link rel="alternate" hreflang="ca" href={rutas.ca} />
     <!-- En construcción: fuera de los buscadores hasta que se publique con dominio. -->
     <meta name="robots" content="noindex, nofollow" />
   </head>
   <body>
-    <a class="saltar" href="#contenido">Saltar al contenido</a>
+    <a class="saltar" href="#contenido">{textos[idioma].saltar}</a>
     <slot name="cabecera" />
     <main id="contenido">
       <slot />
