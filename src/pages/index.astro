@@ -49,7 +49,7 @@ const pegatinas = [
   { texto: 'Renta', color: 'naranja', x: '6%', y: '18%', giro: '-8deg' },
   { texto: 'Autónomos', color: 'menta', x: '74%', y: '12%', giro: '6deg' },
   { texto: 'Herencias', color: 'rosa', x: '80%', y: '52%', giro: '-5deg' },
-  { texto: 'Becas', color: 'limon', x: '10%', y: '58%', giro: '9deg' },
+  { texto: 'Becas', color: 'limon', x: '30%', y: '50%', giro: '9deg' },
   { texto: '0 € de los bancos', color: 'blanca', x: '60%', y: '74%', giro: '-3deg' },
 ];
 
@@ -506,6 +506,15 @@ const cinta = ['Renta', 'Autónomos', 'Herencias', 'Donaciones', 'Becas', 'Tu ba
     animation: tarjeta 1.1s 0.2s var(--curva) both;
   }
   @keyframes tarjeta { from { opacity: 0; transform: translateY(40px) rotate(-4deg); } }
+  /* En portátil y escritorio la tarjeta baja a la franja inferior, entre el texto y los enlaces,
+     para no tapar el nombre (en móvil sí queda bien superpuesta). */
+  @media (min-width: 48rem) {
+    .portada__tarjeta {
+      top: auto; bottom: clamp(2rem, 5vw, 3.5rem);
+      width: auto; height: clamp(12rem, 28svh, 17rem);
+    }
+    .portada__monograma { font-size: clamp(4.5rem, 12svh, 8rem); }
+  }
   .portada__monograma {
     font-size: clamp(5rem, 11vw, 10rem); font-weight: 800; color: var(--color-crema-claro);
     letter-spacing: -0.05em; line-height: 1;
